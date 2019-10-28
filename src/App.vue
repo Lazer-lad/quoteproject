@@ -27,6 +27,9 @@ import Header from "./components/Header.vue";
         },
         methods: {
             newQuote(quote) {
+                if (this.quotes.length >= this.maxQuotes){
+                    return alert('please delete quotes')
+                }
                 this.quotes.push(quote);
 
             },
